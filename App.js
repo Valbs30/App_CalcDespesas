@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar'
+import { Image, StyleSheet, Text, TextInput, View } from 'react-native'
 
 export default function App() {
 	return (
@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
 		marginVertical: 20
 	},
 	botao: {
-		backgroundColor: '#121A2C',
-		color: '#FFBA26',
+		backgroundColor: '#171717',
+		color: '#2F8F01',
 		borderRadius: 4,
 		paddingVertical: 8,
 		paddingHorizontal: 60,
@@ -54,4 +54,4 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		top: 0
 	}
-});
+})

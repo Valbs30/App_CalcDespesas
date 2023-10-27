@@ -15,6 +15,12 @@ export default function Categorias({ navigation }) {
                     </TouchableOpacity>
                 </View>
             </TouchableOpacity>
+
+            <Text style={styles.titulo}>Tipos de Categoria</Text>
+
+            <View style={styles.div}>
+                <Text style={styles.titulo2}>Categoria</Text>
+            </View>
         </View>
     );
 }

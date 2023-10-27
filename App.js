@@ -1,57 +1,21 @@
-import { StatusBar } from 'expo-status-bar'
-import { Image, StyleSheet, Text, TextInput, View } from 'react-native'
+import Login from './screens/login'
+import Home from './screens/home'
+import Despesas from './screens/detdesp'
+import Categorias from './screens/categ'
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-	return (
-		<View style={styles.container}>
-			<Image style={styles.imagem} source={require('./assets/despesascapa.jpg')} />
-			<Text style={styles.titulo2}>Sistema</Text>
-			<Text style={styles.titulo}>Calculadora Despesas</Text>
-			<TextInput style={styles.input} placeholder='E-mail' />
-			<TextInput style={styles.input} placeholder='Senha' secureTextEntry />
-			<Text style={styles.botao}>ENTRAR</Text>
-			<Text>Criar Conta</Text>
-			<StatusBar style="auto" />
-		</View>
-	);
+  return (
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Despesas" component={Despesas} />
+		<Stack.Screen name="Categorias" component={Categorias} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#FCFBFF',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-	titulo: {
-		color: '#121A2C',
-		fontSize: 24,
-		fontWeight: 'bold'
-	},
-	titulo2: {
-		color: '#121A2C',
-		fontSize: 16,
-	},
-	input: {
-		paddingVertical: 12,
-		paddingHorizontal: 16,
-		borderRadius: 4,
-		borderWidth: 1,
-		borderColor: '#747474',
-		marginVertical: 20
-	},
-	botao: {
-		backgroundColor: '#171717',
-		color: '#2F8F01',
-		borderRadius: 4,
-		paddingVertical: 8,
-		paddingHorizontal: 60,
-		marginBottom: 4
-	},
-	imagem: {
-		width: '100%',
-		height: 200,
-		position: 'absolute',
-		top: 0
-	}
-})

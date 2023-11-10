@@ -71,4 +71,7 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         padding: 20
     },
+	erro: {
+        color: 'red'
+    },
 })

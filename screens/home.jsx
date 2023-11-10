@@ -1,8 +1,12 @@
 import { Image, Text, TextInput, TouchableOpacity, View, ViewBase } from 'react-native';
 import { MaterialIcons, AntDesign, Ionicons } from '@expo/vector-icons'
 import { styles } from '../style';
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext.js';
 
 export default function Home({ navigation }) {
+    const {username} = useContext(AuthContext)
+    
     return (
         <View style={styles.container2}>
             <View style={styles.header}>
